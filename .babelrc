@@ -1,0 +1,11 @@
+// instale(2) "@babel/core": "^7.10.3", ->incluye todas las herramientas para instalar a codigo moderno
+   // "@babel/preset-env": "^7.10.3",->trabajar con mcscript 6
+    //"@babel/preset-react": "^7.10.1",_>me sirve para trabajr con react
+    //"babel-loader": "^8.1.0"_>trabaja con webpack
+
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ]
+}
