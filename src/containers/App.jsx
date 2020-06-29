@@ -6,26 +6,18 @@ import Search from '../components/Search';
 import Categories from '../components/Categories';
 import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
+import useInitialState from '../hooks/useInitialState'
 import Footer from '../components/Footer';
 
+const API='http://localhost:3000/initialState';
+
 const App = () => {
-  const [videos, setVideos] = useState({
-    'mylist': [],
-    'trends': [],
-    'originals': [],
-  });
-
-  useEffect(() => {
-    fetch(' http://localhost:3000/initalState')
-      .then((response) => response.json())
-      .then((data) => setVideos(data));
-  }, []);
-
+  const initialState = useInitialState(API);
   return (
     <div className='App'>
       <Header />
       <Search />
-      {videos.mylist.length > 0 && (
+      {initialState.mylist.length > 0 && (
         <Categories title='Mi lista'>
           <Carousel>
             <CarouselItem />
@@ -35,7 +27,7 @@ const App = () => {
 
       <Categories title='TENDENCIAS'>
         <Carousel>
-          {videos.trends.map((item) => (
+          {initialState.trends.map((item) => (
             <CarouselItem
               key={item.id}
               {...item}
