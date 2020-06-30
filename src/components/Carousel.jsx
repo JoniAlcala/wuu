@@ -2,7 +2,7 @@ import React from 'react';
 import '../assets/components/Carousel.scss';
 
 const Carousel = ({ children }) => (
-  <section classNamee='carousel'>
+  <section className='carousel'>
     <div className='carousel__container'>
       {children}
     </div>
