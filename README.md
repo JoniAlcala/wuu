@@ -1,2 +1,2 @@
-# SEEYOUU
-Trabajo usando JavaScirpt y react .
+
+Trabajo usando JavaScirpt y react 
