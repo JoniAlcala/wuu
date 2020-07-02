@@ -4,7 +4,11 @@ const useInitialState = () => {
   const [videos, setVideos] = useState({
     'mylist': [],
     'trends': [],
+<<<<<<< HEAD
     'nuevo': [],
+=======
+    'originals': [],
+>>>>>>> b0d9c0135e28e9931ebd1a252e5ecfffd14cadbf
   });
 
   useEffect(() => {

@@ -11,7 +11,11 @@
         "year": 2009,
         "contentRating": "16+",
         "duration": 164,
+<<<<<<< HEAD
         "cover": "http://dummyimage.com/800x600.png/302140/ffffff",
+=======
+        "cover": "",
+>>>>>>> b0d9c0135e28e9931ebd1a252e5ecfffd14cadbf
         "description": "Vestibulum ac est lacinia nisi venenatis tristique",
         "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
       },
