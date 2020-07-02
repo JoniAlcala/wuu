@@ -6,15 +6,11 @@ import map from '../assets/static/music-video.png';
 
 const Header = () => (
   <header className='header'>
-<<<<<<< HEAD
 
     <Link to='/home'>
       <img className='header__img' src={map} alt='logo' />
     </Link>
-    
-=======
-    <img className='header__img' src={map} alt='logo' />
->>>>>>> b0d9c0135e28e9931ebd1a252e5ecfffd14cadbf
+
     <div className='header__menu'>
       <div className='header__menu--profile'>
         <img src={user} alt='' />
