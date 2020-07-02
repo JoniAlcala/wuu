@@ -7,6 +7,7 @@ import App from './routes/App';
 
 const initialState = {
   'user': {},
+  'title': ['Inicia Sesion mrd', 'Mi lista ', 'tendencias', 'originales'],
   'playing': {},
   'mylist': [],
   'trends': [

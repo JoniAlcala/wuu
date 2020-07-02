@@ -7,24 +7,29 @@ import Search from '../components/Search';
 import Categories from '../components/Categories';
 import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
-
 import Footer from '../components/Footer';
 
-const Home = ({ myList, trends, originals }) => {
+const Home = ({ mylist, trends, originals }) => {
 
   return (
     <div className='App'>
       <Header />
       <Search />
-      {myList.length > 0 && (
+      {mylist.length > 0 && (
         <Categories title='Mi lista'>
           <Carousel>
-            <CarouselItem />
+            {mylist.map((item) => (
+              <CarouselItem
+                key={item.id}
+                {...item}
+              />
+            ))}
+
           </Carousel>
         </Categories>
       )}
 
-      <Categories title='trends'>
+      <Categories title='tendencias'>
         <Carousel>
           {trends.map((item) => (
             <CarouselItem
@@ -37,7 +42,12 @@ const Home = ({ myList, trends, originals }) => {
 
       <Categories title='Originales'>
         <Carousel>
-          <CarouselItem />
+          {originals.map((item) => (
+            <CarouselItem
+              key={item.id}
+              {...item}
+            />
+          ))}
         </Carousel>
       </Categories>
 
@@ -47,7 +57,7 @@ const Home = ({ myList, trends, originals }) => {
 };
 const mapStateToProps = (state) => {
   return {
-    myList: state.mylist,
+    mylist: state.mylist,
     trends: state.trends,
     originals: state.originals,
   };
