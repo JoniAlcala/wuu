@@ -1,15 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setFavorite } from '../actions';
+import { setFavorite, deleteFavorite } from '../actions';
 import '../assets/components/CarouselItem.scss';
 import play from '../assets/static/play.png';
 import mas from '../assets/static/add-image.png';
+import remove from '../assets/static/remove.png';
 
 const CarouselItem = (props) => {
   const { cover, title, year, contentRating, duration } = props;
   const handleSetFavorite = () => {
     props.setFavorite({ cover, title, year, contentRating, duration });
   };
+ 
 
   return (
     <div className='carousel-item'>
@@ -40,6 +42,7 @@ const CarouselItem = (props) => {
 };
 const mapDispatchToProps = {
   setFavorite,
+  deleteFavorite,
 };
 
 export default connect(null, mapDispatchToProps)(CarouselItem);
